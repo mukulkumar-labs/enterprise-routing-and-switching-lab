@@ -62,29 +62,29 @@ Documenting issues encountered and resolved is arguably the most useful part of 
 
 Screenshots for each phase are in the `/screenshots` folder:
 
-**`phase1_topology/`**
-- `01_packet_tracer_interface.png` — initial Packet Tracer environment
-- `02_topology_diagram.png` — full topology with all links up
+**`/screenshots/phase1_topology/`**
+- `/screenshots/phase1_topology/01_packet_tracer_interface.png` — initial Packet Tracer environment
+- `/screenshots/phase1_topology/02_topology_diagram.png` — full topology with all links up
 
-**`phase2_ip_addressing/`**
-- `03_branch_router_config.png` — Branch Router interface IP config (CLI)
-- `04_head_office_router_conf.png` — Head Office Router interface IP config (CLI)
-- `05_pc0_conf.png` — PC0 static IP configuration
-- `06_ip_configuration_topology.png` — topology annotated with all assigned IPs
-- `07_ip_interface_on_branch_router.png` — interface verification + successful WAN ping
+**`/screenshots/phase2_ip_addressing/`**
+- `/screenshots/phase2_ip_addressing/03_branch_router_config.png` — Branch Router interface IP config (CLI)
+- `/screenshots/phase2_ip_addressing/04_head_office_router_conf.png` — Head Office Router interface IP config (CLI)
+- `/screenshots/phase2_ip_addressing/05_pc0_conf.png` — PC0 static IP configuration
+- `/screenshots/phase2_ip_addressing/06_ip_configuration_topology.png` — topology annotated with all assigned IPs
+- `/screenshots/phase2_ip_addressing/07_ip_interface_on_branch_router.png` — interface verification + successful WAN ping
 
-**`phase3_ospf/`**
-- `08_ospf_config_on_branch_router.png` — OSPF process config on Branch Router
-- `09_ospf_config_on_head_office_router.png` — OSPF process config on Head Office Router
-- `10_neighbor_state_on_branch_router.png` — neighbor adjacency reaching FULL state
-- `11_ip_route_ospf_on_head_office_router.png` — Head Office Router learning the branch's VLAN subnet via OSPF
+**`/screenshots/phase3_ospf/`**
+- `/screenshots/phase3_ospf/08_ospf_config_on_branch_router.png` — OSPF process config on Branch Router
+- `/screenshots/phase3_ospf/09_ospf_config_on_head_office_router.png` — OSPF process config on Head Office Router
+- `/screenshots/phase3_ospf/10_neighbor_state_on_branch_router.png` — neighbor adjacency reaching FULL state
+- `/screenshots/phase3_ospf/11_ip_route_ospf_on_head_office_router.png` — Head Office Router learning the branch's VLAN subnet via OSPF
 
-**`phase4_vlan/`**
-- `12_vlan_conf_on_switch.png` — VLAN creation, access ports, trunk config on Switch0
-- `13_sub_interface_naming_error_on_branch_router` — the sub-interface naming error encountered (see Troubleshooting Log)
-- `13_sub_interface_config_on_branch_router.png` — corrected sub-interface config, verified up/up
-- `14_pc1_in_vlan20_conf.png` — PC1 re-addressed into VLAN 20
-- `15_pc0_to_pc1_ping.png` — successful inter-VLAN ping (TTL=127 confirms routed hop)
+**`/screenshots/phase4_vlan/`**
+- `/screenshots/phase4_vlan/12_vlan_conf_on_switch.png` — VLAN creation, access ports, trunk config on Switch0
+- `/screenshots/phase4_vlan/13_sub_interface_naming_error_on_branch_router` — the sub-interface naming error encountered (see Troubleshooting Log)
+- `/screenshots/phase4_vlan/13_sub_interface_config_on_branch_router.png` — corrected sub-interface config, verified up/up
+- `/screenshots/phase4_vlan/14_pc1_in_vlan20_conf.png` — PC1 re-addressed into VLAN 20
+- `/screenshots/phase4_vlan/15_pc0_to_pc1_ping.png` — successful inter-VLAN ping (TTL=127 confirms routed hop)
 
 ## Configs
 
