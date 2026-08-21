@@ -1,0 +1,26 @@
+! ===================================================
+! HEAD OFFICE ROUTER (Cisco 2911) - Full Configuration
+! ===================================================
+
+enable
+configure terminal
+
+! --- WAN Link to Branch Router ---
+interface gigabitEthernet0/0
+ ip address 192.168.1.2 255.255.255.252
+ no shutdown
+exit
+
+! --- OSPF Configuration ---
+router ospf 1
+ network 192.168.1.0 0.0.0.3 area 0
+exit
+
+end
+write memory
+
+! --- Verification commands used ---
+! show ip interface brief
+! ping 192.168.1.1
+! show ip ospf neighbor
+! show ip route ospf

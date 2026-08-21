@@ -1,0 +1,39 @@
+! ===================================================
+! SWITCH0 (Cisco 2960-24TT) - Full Configuration
+! ===================================================
+
+enable
+configure terminal
+
+! --- Create VLANs ---
+vlan 10
+ name STAFF
+exit
+
+vlan 20
+ name GUEST
+exit
+
+! --- Access port for PC0 (VLAN 10 - Staff) ---
+interface fastEthernet0/2
+ switchport mode access
+ switchport access vlan 10
+exit
+
+! --- Access port for PC1 (VLAN 20 - Guest) ---
+interface fastEthernet0/3
+ switchport mode access
+ switchport access vlan 20
+exit
+
+! --- Trunk port toward Branch Router ---
+interface fastEthernet0/1
+ switchport mode trunk
+exit
+
+end
+write memory
+
+! --- Verification commands used ---
+! show vlan brief
+! show interfaces trunk

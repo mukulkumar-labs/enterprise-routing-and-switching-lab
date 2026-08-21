@@ -1,0 +1,57 @@
+! ===================================================
+! BRANCH ROUTER (Cisco 2911) - Full Configuration
+! ===================================================
+
+enable
+configure terminal
+
+! --- WAN Link to Head Office Router ---
+interface gigabitEthernet0/0
+ ip address 192.168.1.1 255.255.255.252
+ no shutdown
+exit
+
+! --- LAN-facing interface (trunk to Switch0) ---
+! No IP on the physical interface - IP addressing lives on the
+! sub-interfaces below (router-on-a-stick)
+interface gigabitEthernet0/1
+ no ip address
+ no shutdown
+exit
+
+! --- Sub-interface for VLAN 10 (Staff) ---
+interface gigabitEthernet0/1.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+exit
+
+! --- Sub-interface for VLAN 20 (Guest) ---
+interface gigabitEthernet0/1.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+exit
+
+! --- OSPF Configuration ---
+router ospf 1
+ network 192.168.1.0 0.0.0.3 area 0
+ network 192.168.10.0 0.0.0.255 area 0
+ network 192.168.20.0 0.0.0.255 area 0
+exit
+
+end
+write memory
+
+! ===================================================
+! NOTE: The 192.168.20.0 OSPF network statement above was not
+! run during the live lab session (only .1.0 and .10.0 were
+! added). Add it before your final verification pass so the
+! Head Office Router also learns the VLAN 20 route via OSPF -
+! otherwise inter-site reachability to VLAN 20 will be missing,
+! even though local inter-VLAN routing at the branch still works.
+! ===================================================
+
+! --- Verification commands used ---
+! show ip interface brief
+! show ip ospf neighbor
+! show ip route ospf
+! show vlan brief   (run on Switch0, not the router)
