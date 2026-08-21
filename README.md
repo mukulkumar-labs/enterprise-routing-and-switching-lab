@@ -60,10 +60,10 @@ Documenting issues encountered and resolved is arguably the most useful part of 
 
 ## Verification Evidence
 
-Screenshots for each phase are in the `/screenshots` folder:
+Screenshots for each phase are in the [`screenshots/`](./screenshots). folder:
 
-**`/screenshots/phase1_topology/`**
-- `/screenshots/phase1_topology/01_packet_tracer_interface.png` — initial Packet Tracer environment
+**[`screenshots/phase1_topology/](./screenshots/phase1_topology/).**
+- [`/screenshots/phase1_topology/01_packet_tracer_interface.png](./screenshots/phase1_topology/01_packet_tracer_interface.png). — initial Packet Tracer environment
 - `/screenshots/phase1_topology/02_topology_diagram.png` — full topology with all links up
 
 **`/screenshots/phase2_ip_addressing/`**
