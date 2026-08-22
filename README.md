@@ -107,40 +107,40 @@ Screenshots for each phase are in the [/screenshot](/screenshot) folder:
 
 **[/screenshots/phase4_vlan/](/screenshots/phase4_vlan)**
 - [/screenshots/phase4_vlan/12_vlan_conf_on_switch.png](/screenshots/phase4_vlan/12_vlan_conf_on_switch.png) — VLAN creation, access ports, trunk config on Switch0
-- [/screenshots/phase4_vlan/13_sub_interface_naming_error_on_branch_router` — the sub-interface naming error encountered (see Troubleshooting Log)
+- [/screenshots/phase4_vlan/13_sub_interface_naming_error_on_branch_router](/screenshots/13_sub_interface_naming_error_on_branch_router.png) — the sub-interface naming error encountered (see Troubleshooting Log)
 - [/screenshots/phase4_vlan/13_sub_interface_config_on_branch_router.png](/screenshots/phase4_vlan/13_sub_interface_config_on_branch_router.png) — corrected sub-interface config, verified up/up
 - [/screenshots/phase4_vlan/14_pc1_in_vlan20_conf.png](/screenshots/phase4_vlan/14_pc1_in_vlan20_conf.png) — PC1 re-addressed into VLAN 20
 - [/screenshots/phase4_vlan/15_pc0_to_pc1_ping.png]([/screenshots/phase4_vlan/15_pc0_to_pc1_ping.png) — successful inter-VLAN ping (TTL=127 confirms routed hop)
 
 **[/sreenshots/phase5-bgp](/screenshots/phase5_bgp)**
-- [/sreenshots/phase5-bgp](/screenshots/phase5_bgp/16_topology_with_isp_router.png) — topology extended with the ISP Router and new link
-- [/sreenshots/phase5-bgp](/screenshots/phase5_bgp/17_isp_router_loopbakc_config.png) — loopback interface config (simulated external network)
-- [/sreenshots/phase5-bgp](/screenshots/phase5_bgp/18_bgp_config_on_branch_router.png) — BGP process config, AS 65001
-- [/sreenshots/phase5-bgp](/screenshots/phase5_bgp/19_bgp_config_on_isp_router.png) — BGP process config, AS 65002
-- [/sreenshots/phase5-bgp](/screenshots/phase5_bgp/20_neighbor_state_established_on_branch_router.png) — populated BGP table + 100% successful ping, post-fix
-- [/sreenshots/phase5-bgp](/screenshots/phase5_bgp/21_neighbor_state_established_on_isp_router.png) — populated BGP table on the ISP side, post-fix
+- [/sreenshots/phase5-bgp/16_topology_with_isp_router.png](/screenshots/phase5_bgp/16_topology_with_isp_router.png) — topology extended with the ISP Router and new link
+- [/sreenshots/phase5-bgp/17_isp_router_loopbakc_config.png](/screenshots/phase5_bgp/17_isp_router_loopbakc_config.png) — loopback interface config (simulated external network)
+- [/sreenshots/phase5-bgp/18_bgp_config_on_branch_router.png](/screenshots/phase5_bgp/18_bgp_config_on_branch_router.png) — BGP process config, AS 65001
+- [/sreenshots/phase5-bgp/19_bgp_config_on_isp_router.png](/screenshots/phase5_bgp/19_bgp_config_on_isp_router.png) — BGP process config, AS 65002
+- [/sreenshots/phase5-bgp/20_neighbor_state_established_on_branch_router.png](/screenshots/phase5_bgp/20_neighbor_state_established_on_branch_router.png) — populated BGP table + 100% successful ping, post-fix
+- [/sreenshots/phase5-bgp/21_neighbor_state_established_on_isp_router.png](/screenshots/phase5_bgp/21_neighbor_state_established_on_isp_router.png) — populated BGP table on the ISP side, post-fix
 
 **[/screenshots/phase6_vrf/](/screenshots/phase6_vrf)** (Linux network namespaces)
-- [/screenshots/phase6_vrf/](/screenshots/phase6_vrf/22_ip_netlist_and_ip_route.png) — both namespaces created, identical-IP routes shown (with the initial "linkdown" state)
-- [/screenshots/phase6_vrf/](/screenshots/phase6_vrf/23_linkdown_error_fix.png) — link-state fix applied, clean final routing tables
+- [/screenshots/phase6_vrf/22_ip_netlist_and_ip_route.png](/screenshots/phase6_vrf/22_ip_netlist_and_ip_route.png) — both namespaces created, identical-IP routes shown (with the initial "linkdown" state)
+- [/screenshots/phase6_vrf/23_linkdown_error_fix.png](/screenshots/phase6_vrf/23_linkdown_error_fix.png) — link-state fix applied, clean final routing tables
 
 **[/screenshots/phase7_vxlan](/screenshots/phase7_vxlan/)** (Linux network namespaces)
-- [/screenshots/phase7_vxlan](/screenshots/phase7_vxlan/24_creating_underlay_link.png) — underlay link setup between site-a and site-b
-- [/screenshots/phase7_vxlan](/screenshots/phase7_vxlan/25_underlay_connectivity_confirm.png) — underlay reachability confirmed
-- [/screenshots/phase7_vxlan](/screenshots/phase7_vxlan/26_creating_vxlan_interface.png) — VXLAN interfaces created (VNI 100) in both namespaces
-- [/screenshots/phase7_vxlan](/screenshots/phase7_vxlan/27_namespace_verification.png) — confirming VNI, local/remote IPs, UP state
-- [/screenshots/phase7_vxlan](/screenshots/phase7_vxlan/28_vxlan_interface_verification.png) — successful ping across the overlay network
-- [/screenshots/phase7_vxlan](/screenshots/phase7_vxlan/29_tcpdump_vxlan_encapsulation_proof.png) — live packet capture showing UDP/4789 VXLAN encapsulation of the overlay ICMP traffic
+- [/screenshots/phase7_vxlan/24_creating_underlay_link.png](/screenshots/phase7_vxlan/24_creating_underlay_link.png) — underlay link setup between site-a and site-b
+- [/screenshots/phase7_vxlan/25_underlay_connectivity_confirm.png](/screenshots/phase7_vxlan/25_underlay_connectivity_confirm.png) — underlay reachability confirmed
+- [/screenshots/phase7_vxlan/26_creating_vxlan_interface.png](/screenshots/phase7_vxlan/26_creating_vxlan_interface.png) — VXLAN interfaces created (VNI 100) in both namespaces
+- [/screenshots/phase7_vxlan/27_namespace_verification.png](/screenshots/phase7_vxlan/27_namespace_verification.png) — confirming VNI, local/remote IPs, UP state
+- [/screenshots/phase7_vxlan/28_vxlan_interface_verification.png](/screenshots/phase7_vxlan/28_vxlan_interface_verification.png) — successful ping across the overlay network
+- [/screenshots/phase7_vxlan/29_tcpdump_vxlan_encapsulation_proof.png](/screenshots/phase7_vxlan/29_tcpdump_vxlan_encapsulation_proof.png) — live packet capture showing UDP/4789 VXLAN encapsulation of the overlay ICMP traffic
 
 ## Configs
 
 Full running-config command sequences for each device are in [/configs](/configs).
-- [/configs](/configs/branch_router_config.txt) — base config (WAN, VLAN sub-interfaces, OSPF)
-- [/configs](/configs/branch_router_bgp_addition.txt) — BGP addition (append after the base config)
-- [/configs](/configs/head_office_router_config.txt)
-- [/configs](/configs/switch0_config.txt)
-- [/configs](/configs/isp_router_config.txt) — ISP Router (BGP peer)
-- [/configs](/configs/vrf_and_vxlan_linux_commands.sh) — full Linux command sequence for the VRF-equivalent and VXLAN phases (Kali VM
+- [/configs/branch_router_config.txt](/configs/branch_router_config.txt) — base config (WAN, VLAN sub-interfaces, OSPF)
+- [/configs/branch_router_bgp_addition.txt](/configs/branch_router_bgp_addition.txt) — BGP addition (append after the base config)
+- [/configs/head_office_router_config.txt](/configs/head_office_router_config.txt)
+- [/configs/switch0_config.txt](/configs/switch0_config.txt)
+- [/configs/isp_router_config.txt](/configs/isp_router_config.txt) — ISP Router (BGP peer)
+- [/configs/vrf_and_vxlan_linux_commands.sh](/configs/vrf_and_vxlan_linux_commands.sh) — full Linux command sequence for the VRF-equivalent and VXLAN phases (Kali VM
 
 ## Tools Used
  
