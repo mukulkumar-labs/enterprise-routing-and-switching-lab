@@ -1,0 +1,41 @@
+! ===================================================
+! ISP ROUTER (Cisco 2911) - Full Configuration
+! Added for BGP peering extension (Advanced Phase)
+! ===================================================
+
+enable
+configure terminal
+
+! --- Link to Branch Router ---
+interface gigabitEthernet0/0
+ ip address 192.168.2.2 255.255.255.252
+ no shutdown
+exit
+
+! --- Loopback simulating an external network ---
+interface loopback0
+ ip address 203.0.113.1 255.255.255.0
+exit
+
+! --- BGP Configuration (AS 65002) ---
+router bgp 65002
+ neighbor 192.168.2.1 remote-as 65001
+ network 203.0.113.0 mask 255.255.255.0
+exit
+
+end
+write memory
+
+! --- Verification commands used ---
+! show ip interface brief
+! show ip bgp summary
+! show ip bgp
+! show ip route bgp
+
+! --- Troubleshooting note ---
+! BGP session reached Established state immediately, but the BGP
+! table stayed empty and ping to the peer's network failed (0%
+! success) until a soft reset was issued:
+!   clear ip bgp *
+! After the reset, both routers exchanged routes correctly and
+! end-to-end reachability was confirmed (100% ping success).

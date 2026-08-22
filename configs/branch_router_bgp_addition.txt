@@ -1,0 +1,36 @@
+! ===================================================
+! BRANCH ROUTER - ADDITION: BGP Peering (Advanced Phase)
+! Append this section to branch-router-config.txt after the
+! existing OSPF block. Requires a new interface (Gig0/2) wired
+! to the ISP Router.
+! ===================================================
+
+enable
+configure terminal
+
+! --- Link to ISP Router ---
+interface gigabitEthernet0/2
+ ip address 192.168.2.1 255.255.255.252
+ no shutdown
+exit
+
+! --- BGP Configuration (AS 65001) ---
+router bgp 65001
+ neighbor 192.168.2.2 remote-as 65002
+ network 192.168.10.0 mask 255.255.255.0
+ network 192.168.20.0 mask 255.255.255.0
+exit
+
+end
+write memory
+
+! --- Verification commands used ---
+! show ip bgp summary
+! show ip bgp
+! show ip route bgp
+! ping 203.0.113.1
+
+! --- Troubleshooting note ---
+! See isp-router-config.txt - the BGP table needed a soft reset
+! (clear ip bgp *) on both routers before routes propagated,
+! despite the neighbor session already showing Established.
